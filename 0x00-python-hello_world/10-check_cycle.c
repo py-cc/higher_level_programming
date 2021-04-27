@@ -10,7 +10,7 @@ int check_cycle(listint_t *list)
 	const listint_t *node_1 = list;
 	const listint_t *node_2 = list;
 
-	while (node_2)
+	while (node_2 != NULL && node_1 != NULL && node_2->next NULL)
 	{
 		node_1 = node_1->next;
 		node_2 = node_2->next->next;
