@@ -17,11 +17,9 @@ return (NULL);
 temp = *head;
 new = malloc(sizeof(listint_t));
 if (new == NULL)
-return (NULL)
+return (NULL);
 new->n = number;
 while (head != NULL)
-{
-if (temp->next != NULL)
 {
 num = temp->n;
 if (num < number)
@@ -31,7 +29,6 @@ j++;
 continue;
 }
 break;
-}
 }
 temp = *head;
 for (i = 1; i < j; i++)
