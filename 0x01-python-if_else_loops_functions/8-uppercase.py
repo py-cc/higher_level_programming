@@ -10,6 +10,6 @@ def uppercase(str):
             print(str[index], end='')
         index = index + 1
         count = count + 1
-        if count == x - 1:
+        if count == x - 0:
             print()
             break
