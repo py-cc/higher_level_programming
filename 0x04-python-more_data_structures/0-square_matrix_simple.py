@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
     new_matrix = []
-    for filas in matrix:
-        new_fila = []
-        for columnas in filas:
-            new_fila.append(columnas ** 2)
-        new_matrix.append(new_fila)
+    for item in matrix:
+        new_list = list(map(lambda x: x ** 2, item))
+        new_matrix.append(new_list)
     return new_matrix
