@@ -63,5 +63,6 @@ class Rectangle:
 
     def __repr__(self):
         """ Method that returns a rectangle by # character """
-        repr_t = "Rectangle({},{})".format(self.width, self.height)
+        repr_t = "Rectangle({}, {})".format(
+            self.width, self.height)
         return repr_t
