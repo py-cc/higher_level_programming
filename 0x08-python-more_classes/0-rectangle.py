@@ -2,6 +2,7 @@
 
 """ File class rectangle """
 
+
 class Rectangle:
-	""" Class Rectangle """
-	pass
+    """ Class Rectangle """
+    pass
