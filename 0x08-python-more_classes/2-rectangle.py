@@ -1,20 +1,21 @@
 #!/usr/bin/python3
 """ Module that define a class rectangle """
-    
+
+
 class Rectangle:
-    
+
     """ Class that defines a rectangle """
-    
+
     def __init__(self, width=0, height=0):
         """ Init method to initialized a instance"""
         self.width = width
         self.height = height
-    
+
     @property
     def height(self):
         """ Method getter for height atributte"""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         """ Method setter for height atributte """
@@ -24,12 +25,12 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
-    
+
     @property
     def width(self):
         """ Method getter for width atributte"""
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         """ Method setter for width atributte """
@@ -39,11 +40,11 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         else:
             self.__width = value
-    
+
     def area(self):
         """ Method that calculates area of a rectangle """
         return self.width * self.height
-    
+
     def perimeter(self):
         """ Method that calculates perimeter of a rectangle """
         if self.width == 0 or self.height == 0:
