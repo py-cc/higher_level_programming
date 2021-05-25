@@ -1,0 +1,83 @@
+The ``0-add_integer`` module
+=========================
+
+Using ``add_integer``
+_______________________
+
+This is an test text file. These are the test cases:
+
+	##### Importing the function from the module #####
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+	##### Check that the file is executable #####
+	>>> import os
+	>>> os.access('0-add_integer.py', os.X_OK)
+	True
+
+	##### Check for the documentation of the function #####
+	>>> len(__import__("0-add_integer").add_integer.__doc__) > 10
+	True
+
+	##### CHeck that the README file exists #####
+	>>> cwd = os.getcwd()
+	>>> check_readme = cwd + '/README.md'
+	>>> os.path.exists(check_readme)
+	True
+
+	##### Check for pep8 style #####
+	>>> os.popen("pep8 0-add_integer.py").read()
+	''
+
+	##### Check for a newline at the end of the file #####
+	>>> os.popen("cat -e 0-add_integer.py | tail -1").read()[-1]
+	'\n'
+
+	##### Check for the file has a shebang #####
+	>>> os.popen("cat 0-add_integer.py | head -1").read()
+	'#!/usr/bin/python3\n'
+
+	##### Check for two positive numbers #####
+	>>> add_integer(30, 14)
+	44
+	
+	##### Check for two negative numbers #####
+	>>> add_integer(-10, -30)
+	-40
+
+	##### Check firts value arguments is negative #####
+	>>> add_integer(-2, 6)
+	4
+
+	##### Check second value arguments is negative #####
+	>>> add_integer(2, -6)
+	-4
+
+	##### Check values if float #####
+	>>> add_integer(3.5, 1.5)
+	4
+
+	##### Check values if float negative #####
+	>>> add_integer(-3.5, -3.5)
+	-6
+
+	##### Check when is only one integer argument #####
+	>>> add_integer(2)
+	100
+
+	##### Check is the one argument is a int or float #####
+	>>> add_integer("hello")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	##### Check one value of argument is int o float data type #####
+	>>> add_integer("hello", 2)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+	##### Check is the argument is equal None #####
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
