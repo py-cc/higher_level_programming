@@ -1,0 +1,67 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+This is an test text file. These are the possible test cases:
+
+    ##### Importing the function from the module #####
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+    ##### Check that the file is executable #####
+    >>> import os
+    >>> os.access("3-say_my_name.py", os.X_OK)
+    True
+
+    ##### Check for the documentation of the module #####
+    >>> len(__import__("3-say_my_name").__doc__) > 1
+    True
+
+    ##### Check for the documentation of the function #####
+    >>> len(__import__("3-say_my_name").say_my_name.__doc__) > 1
+    True
+
+    ##### Check for pep8 style #####
+    >>> os.popen("pep8 3-say_my_name.py").read()
+    ''
+
+    ##### Check for a newline at the end of the file #####
+    >>> os.popen("cat -e 3-say_my_name.py | tail -1").read()[-1]
+    '\n'
+
+    ##### Check for the file has a shebang #####
+    >>> os.popen("cat 3-say_my_name.py | head -1").read()
+    '#!/usr/bin/python3\n'
+
+    ##### Check that the README file exists #####
+    >>> cwd = os.getcwd()
+    >>> check_readme = cwd + '/README.md'
+    >>> os.path.exists(check_readme)
+    True
+
+	##### Check that argument is number #####
+	>>> say_my_name(12, "White")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+	##### Check that aguments they are string #####
+	>>> say_my_name("Paola", "Carrero")
+	My name is Paola Carrero
+
+	#### Check argument empty #####
+	>>> say_my_name("Bod")
+	My name is Bod 
+
+	##### Check when is passed a None as argument #####
+	>>> say_my_name(None)
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
+
+	##### Check when is passed a boolean data type #####
+	>>> say_my_name(True, "Hola")
+	Traceback (most recent call last):
+	...
+	TypeError: first_name must be a string
