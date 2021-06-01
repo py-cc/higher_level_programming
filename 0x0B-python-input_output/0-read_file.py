@@ -2,7 +2,6 @@
 """Module that read a file"""
 
 
-
 def read_file(filename=""):
     """Method that reads a file and prints to stdout
     Args:
