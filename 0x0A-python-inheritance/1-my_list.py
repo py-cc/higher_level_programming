@@ -13,5 +13,4 @@ class MyList(list):
         Return:
            Always nothing.
         """
-        sorted_list = sorted(self)
-        print(sorted_list)
+        print(sorted(self))
